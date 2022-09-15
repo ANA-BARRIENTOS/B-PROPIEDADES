@@ -1,0 +1,306 @@
+main.mainContainer_propiedades--HTML {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto 0px auto;
+    
+
+    h2 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        padding: 0rem 0.5rem;
+    }
+
+
+    div.listing-header {
+        max-width: 1170px;
+        padding: 0.5rem;
+        margin: 0rem 0.5rem;
+        margin-bottom: 2.5rem;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    
+        border: 1px solid #d4d4d4;
+
+        ul.list-inline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+        // Icons on left side
+        ul.list-icons {
+            li {
+                display: flex;
+                flex-flow: row wrap;
+                margin-right: 0.5rem;
+                a {
+                    width: 40px;
+                    height: 40px;
+                    img {
+                        padding: 7px;
+                        border: #d4d4d4 1px solid;
+                        border-radius: 0.25em 0px 0.25em 0px;
+                    }
+                }
+            }
+            li:hover {
+                background-color: #d4d4d4;
+                border-radius: 0.25em 0px 0.25em 0px;
+            }
+        }
+
+        // List on right side
+        ul.list-sort {
+            div {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: center;
+                li {
+                    label {
+                        margin-right: 8px;
+                    }
+                    select.chosen-select {
+                        padding: 0.5em;
+                        margin: 0;
+                        height: 40px;
+                        width: 140px;
+                        border: 1px solid #d4d4d4;
+                        border-radius: 0.25em 0px 0.25em 0px;
+                    }
+                    select#order_status {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    // ++++++++++++>
+    // Open CARDS SECTION
+    // ++++++++++++>
+    section.property_cards--container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+
+        article.property_card {
+            width: 350px;
+            background-color: #fff;
+            border: 1px solid #d4d4d4;
+            margin: 1rem;
+            cursor: pointer;
+            transition: opacity 0.35s, transform 0.35s;
+            transition: box-shadow 0.35s ease;
+            &:hover {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            }
+            // EFFECT to img when hover on parent
+            &:hover div.property_img img {
+                transform: translate(5px, 0px);
+                opacity: 0.7;
+            }
+            div.property_img {
+                width: 350px;
+                height: 250px;
+                background-color: #3d3d3d;
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    display: block;
+                    width: 105%;
+                    height: auto;
+                    // TRANSITION to EFFECT to img when hover on parent
+                    transition: opacity 0.35s, transform 0.35s;
+                }
+            }
+            div.property_info {
+                padding: 2rem 1.25rem;
+                h3 {
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                    &:hover {
+                        color: #c20114;
+                    }
+                }
+                address {
+                    font-size: 14px;
+                }
+            }
+            div.property_amenities {
+                padding: 0.5rem 1.25rem;
+                border-top: 1px solid #d4d4d4;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                ul.pull-right {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 10px;
+                    li {
+                        img {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ++++++++++++>
+    // End CARDS SECTION
+    // ++++++++++++>
+
+    ul.pagination {
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 40px 40px 40px 80px;
+        justify-content: start;
+        justify-items: start;
+        column-gap: 10px;
+        width: fit-content;
+        li.number {
+            width: 40px;
+            height: 40px;
+            border: #d4d4d4 1px solid;
+            border-radius: 0.25em 0px 0.25em 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            &:hover {
+                background-color: #3d3d3d;
+                a {
+                    color: #fff;
+                }
+            }
+            a {
+                width: fit-content;
+                height: fit-content;
+                padding: 100%;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        li.next {
+            border-radius: 0.25em 0px 0.25em 0px;
+            height: 40px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: #d4d4d4 1px solid;
+            &:hover {
+                background-color: #3d3d3d;
+                a {
+                    color: #fff;
+                }
+            }
+            a {
+                width: fit-content;
+                height: fit-content;
+                padding: 100%;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    li.n1 {
+        background-color: #3d3d3d;
+        a {
+            color: #fff;
+        }
+    }
+
+}
+
+// MEDIA QUERIES FOR CARDS
+@media screen and (max-width: 767px) {
+
+    main.mainContainer_propiedades--HTML {
+        section.property_cards--container {
+            article.property_card {
+                width: 320px;
+                div.property_img {
+                    width: 320px;
+                    height: 220px;
+                }
+                div.property_info {
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+// List Icons
+@media screen and (max-width: 639px) {
+    main.mainContainer_propiedades--HTML {
+        div.listing-header {
+            justify-content: center;
+            ul.list-inline {
+                flex-flow: row nowrap;
+            }
+            ul.list-icons {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+// List Sort By
+@media screen and (max-width: 495px) {
+    main.mainContainer_propiedades--HTML {
+        div.listing-header {
+            flex-direction: column;
+            ul.list-icons {
+                align-items: flex-start;
+                li#li3 {
+                    margin-right: 0px;
+                }
+            }
+            ul.list-sort {          
+                flex-direction: column;
+                align-items: flex-end;
+                div {
+                    width: 245px;
+                    justify-content: end;
+                    li {
+                        font-size: 14px;
+                        select {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                div.div-order {
+                    margin-bottom: 10px;
+                    li {
+                        select#order_status {
+                            margin-right: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

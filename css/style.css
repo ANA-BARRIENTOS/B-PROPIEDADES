@@ -256,13 +256,14 @@ main.mainContainer_propiedades--HTML {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 15vh 1rem; }
   .contact--HTML .contact_form {
     display: flex;
     flex-direction: column;
     background-color: #d4d4d4;
     padding: 1rem;
-    margin: 3rem 1rem;
+    margin: 1rem;
     max-width: 1200px;
     border-radius: 0.5em 0px 0.5em 0px; }
     .contact--HTML .contact_form .div-1 {
@@ -284,24 +285,36 @@ main.mainContainer_propiedades--HTML {
         resize: none;
         border: none; }
   .contact--HTML iframe {
-    width: 474.667px;
-    min-width: auto;
+    max-width: 1200px;
+    min-width: 272px;
+    width: 442.667px;
+    height: 392px;
     border-radius: 0.5em 0px 0.5em 0px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; }
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem;
+    margin: 1rem; }
+
+@media screen and (max-width: 1045px) {
+  .contact--HTML {
+    margin: 3rem 1rem; } }
 
 @media screen and (max-width: 525px) {
-  .contact--HTML .contact_form .div-1 {
-    grid-template-columns: 1fr;
-    justify-items: stretch; }
-  .contact--HTML .contact_form .div-2 {
-    display: grid;
-    justify-content: stretch; }
-  .contact--HTML .contact_form .div-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px; }
-  .contact--HTML iframe {
-    width: 100%; } }
+  .contact--HTML {
+    margin: 3rem 1rem; }
+    .contact--HTML .contact_form {
+      width: 100vh; }
+      .contact--HTML .contact_form .div-1 {
+        grid-template-columns: 1fr;
+        justify-items: stretch; }
+      .contact--HTML .contact_form .div-2 {
+        display: grid;
+        justify-content: stretch; }
+      .contact--HTML .contact_form .div-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px; }
+    .contact--HTML iframe {
+      width: 100%; } }
 
 * {
   padding: 0;

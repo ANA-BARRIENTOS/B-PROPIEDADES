@@ -331,7 +331,7 @@ body {
 header {
   padding: 20px 0px 20px 0px;
   text-align: center;
-  background-image: linear-gradient(to left, #707070, #d4d4d4, #707070); }
+  background-image: linear-gradient(to left, #d4d4d4, #fff, #d4d4d4); }
   header a img#logo {
     height: 80px; }
 
@@ -459,7 +459,7 @@ header {
     width: 90%;
     margin: 2rem 0rem; }
     .ftr .ftr_section2 .contact_containers {
-      padding: 0.3rem;
+      padding: 0.8rem;
       margin: 3rem 1rem;
       border-radius: 0.25rem 0rem 0.25rem 0rem; }
       .ftr .ftr_section2 .contact_containers:hover {
@@ -481,6 +481,10 @@ header {
     align-items: center; }
     .ftr .ftr_section3 p {
       color: #fff; }
+      .ftr .ftr_section3 p a {
+        color: #fff; }
+        .ftr .ftr_section3 p a:hover {
+          color: #c20114; }
 
 @media screen and (max-width: 321px) {
   .ftr .ftr_section1 {

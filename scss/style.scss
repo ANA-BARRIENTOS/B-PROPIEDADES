@@ -343,6 +343,7 @@ header {
 section.home_heroImage {
     width: 100%;
     height: 70vh;
+    min-height: 300px;
     background-image: url(../img/main_image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -395,10 +396,10 @@ section.home_heroImage {
             }
             div.middle-buttons {
                 display: grid;
+                grid-template-columns: 285.767px 285.767px 285.767px 285.767px;
                 justify-items: stretch;
-                align-items: center;
-                grid-template-columns: 1fr;
                 gap: 8px;
+
             }
             div.div_btn5 {
                 margin-top: 1rem;
@@ -406,6 +407,33 @@ section.home_heroImage {
         }
     }
 }
+
+// Open Media Queries
+@media screen and (max-width: 1247.07px) {
+    section.home_heroImage {
+        .fieldset {
+            form {
+                div.middle-buttons {
+                    grid-template-columns: 285.767px 285.767px;
+                    grid-template-rows: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section.home_heroImage {
+        .fieldset {
+            form {
+                div.middle-buttons {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}
+// End Media Queries
 // +++ End PRIMERA SECCIÓN Index -> Background Image -> Search Form ++>
 
 
@@ -688,16 +716,6 @@ main#html4 {
                 transition: all 1s;
                 &:hover {
                     transform: scale(1.1);
-                    // background-color: #731010;
-                    // border: none;
-                    // div.team_textContainer {
-                    //     h3 {
-                    //         color: #fff;
-                    //     }
-                    //     p {
-                    //         color: #fff;
-                    //     }
-                    // }
                 }
                 article.team_container {
                     width: 250px;

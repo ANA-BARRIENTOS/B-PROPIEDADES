@@ -254,7 +254,9 @@ main.mainContainer_propiedades--HTML {
 .contact--HTML {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
   .contact--HTML .contact_form {
     display: flex;
     flex-direction: column;
@@ -281,6 +283,11 @@ main.mainContainer_propiedades--HTML {
         border-radius: 0.25em 0px 0.25em 0px;
         resize: none;
         border: none; }
+  .contact--HTML iframe {
+    width: 474.667px;
+    min-width: auto;
+    border-radius: 0.5em 0px 0.5em 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; }
 
 @media screen and (max-width: 525px) {
   .contact--HTML .contact_form .div-1 {
@@ -292,7 +299,9 @@ main.mainContainer_propiedades--HTML {
   .contact--HTML .contact_form .div-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px; } }
+    gap: 8px; }
+  .contact--HTML iframe {
+    width: 100%; } }
 
 * {
   padding: 0;
@@ -495,6 +504,7 @@ header {
 section.home_heroImage {
   width: 100%;
   height: 70vh;
+  min-height: 300px;
   background-image: url(../img/main_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -539,12 +549,20 @@ section.home_heroImage {
           border-radius: 0px 0.25em 0.25em 0px; }
       section.home_heroImage .fieldset form div.middle-buttons {
         display: grid;
+        grid-template-columns: 285.767px 285.767px 285.767px 285.767px;
         justify-items: stretch;
-        align-items: center;
-        grid-template-columns: 1fr;
         gap: 8px; }
       section.home_heroImage .fieldset form div.div_btn5 {
         margin-top: 1rem; }
+
+@media screen and (max-width: 1247.07px) {
+  section.home_heroImage .fieldset form div.middle-buttons {
+    grid-template-columns: 285.767px 285.767px;
+    grid-template-rows: 1fr 1fr; } }
+
+@media screen and (max-width: 640px) {
+  section.home_heroImage .fieldset form div.middle-buttons {
+    grid-template-columns: 1fr; } }
 
 div.section2 {
   padding: 3rem 0rem; }

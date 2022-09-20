@@ -5,6 +5,8 @@
     display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     .contact_form {
         display: flex;
         flex-direction: column;
@@ -35,6 +37,12 @@
             }
         }
     }
+    iframe {
+        width: 474.667px;
+        min-width: auto;
+        border-radius: 0.5em 0px 0.5em 0px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
 }
 
 // Media Queries
@@ -54,6 +62,9 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 8px;
             }
+        }
+        iframe {
+            width: 100%;
         }
     }
 }
